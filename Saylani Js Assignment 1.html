@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: antiquewhite;
+        }
+
+        h1,
+        p {
+            color: black;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        h1,
+        p:hover {
+            color: blue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-transform: uppercase;
+            text-decoration: double;
+        }
+
+        ol {
+            color: blue;
+            list-style-type: lower-greek;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ol li:hover {
+            color: black;
+            font-size: 25px;
+        }
+
+        details {
+            font-size: 15px;
+            color: grey;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        details:hover {
+            color: red;
+            font-size: 25px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Saylani JavaScript Assignment</h1>
+    <p>What we have to do is: <br> </p>
+
+    <ol>
+        <li>First take name of the user as an input.</li>
+        <li> Secondly user's father name too.</li>
+        <li> Then take any integer number as an input from the user.</li>
+        <li> Then print that number's table</li>
+    </ol>
+    <script>
+        alert("This website is just for printing tables of the input numbers.\n" +
+            "So be a part of this and enjoy.");
+
+        let name = prompt("Dear user, kindly enter your good name:");
+        let fname = prompt("Dear user, kindly enter your father name:");
+        let full_name = name + " " + fname;
+        document.write("So according to your given information" +
+            " Your Full Name is " + full_name);
+        document.write("<br>")
+
+        // for (let index = 1; index < 11; index++) {
+
+        //     document.write(number + " * " + index + " = " + number * index);
+        //     document.write("\n");
+        // }
+
+        /* program to generate a multiplication table
+upto a range */
+
+        // take number input from the user
+        const numbers = parseInt(prompt("So Mr. " + full_name + " Plz enter an integer: "));
+
+        // take range input from the user
+        const range = parseInt(prompt(' Enter the range also : '));
+
+        //creating a multiplication table
+        for (let i = 1; i <= range; i++) {
+            const result = i * numbers;
+            console.log(numbers + ' * ' + i + ' = ' + result);
+            document.write(numbers + ' * ' + i + ' = ' + result + "<br>");
+        }
+
+
+    </script>
+
+    <summary>
+        <details>
+            <dl>
+                <dt> Use the (\n) for a newline character. <br></dt>
+                <dd> document.write("\n");</dd>
+
+                <dd> You can also have more than one: </dd>
+
+                <dd> document.write("\n\n\n"); // 3 new lines! My oh my! </dd>
+                <br>
+
+                <dt>However, if this is rendering to HTML,
+                    you will want to use the HTML tag for a newline:
+                </dt>
+
+                <dd>
+                    document.write("<br>");
+                    The string Hello\n\nTest in your source will look like this:
+                    Hello
+
+                    Text
+                </dd>
+
+
+                <dt> The string Hello<br><br>Test will look like this in HTML source:
+                </dt>
+
+                <dd>
+                    Hello<br><br>Test
+                    The HTML one will render as line breaks for the person viewing the page, the \n just drops the text
+                    to the
+                    next line in the source (if it's on an HTML page).
+                </dd>
+            </dl>
+        </details>
+    </summary>
+</body>
+
+</html>

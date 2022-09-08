@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box1">
+        Box1 content is here.
+        <button onclick="myfunc('box1')">
+            click me for box 1 content.
+        </button>
+    </div>
+
+    <div id="box2">
+        Box2 content is here.
+        <button onclick="myfunc('box2')">
+            click me for box 2 content.
+        </button>
+    </div>
+
+    <div id="box3">
+        Box3 content is here.
+        <button onclick="myfunc('box3')">
+            click me for box 3 content.
+        </button>
+    </div>
+
+    <button onclick="mywholepage()"> Whole Page Button</button>
+    <script>
+
+        function mywholepage() {
+            window.print();
+        }
+
+        // so in order to give argument in a function and a function has a same parameter then we use
+        //  paralanguage or any other thing in calling a function.
+
+        function myfunc(paravalue) {
+            var backup = document.body.innerHTML; // For storing all the things.
+            var Content = document.getElementById(paravalue).innerHTML;
+            document.body.innerHTML = Content;
+            window.print();
+            document.body.innerHTML = backup;
+
+
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Manager In JavaScript</title>
+    <style>
+        #btn
+        {
+            color: white;
+            background-color: black;
+            padding: 20px;
+            text-align: center;
+            border: 3px solid white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p> Simply in this tutorial, I am studying about the events and event listeners. So what they
+        mean actually. They means when we are doing any action on webpage so the action performed by the Mouse
+         or our website is known as " <b> Events & Listening to Events </b>".
+    </p>
+    <h4> Mouse Events:</h4>
+    <ol>
+        <li>Click</li>
+        <li>Context Menu</li>
+        <li> MouseOver</li>
+        <li> Mouse Out</li>
+        <li> Mouse Up</li>
+        <li> Mouse Down</li>
+        <li> Mouse Move</li>
+        <li> Submit</li>
+        <li> Focus</li>
+        <li> DOM Content Loaded</li>
+        <li> Transitioned</li>
+    </ol>
+
+    <h2> Heading Number 2</h2>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo accusamus culpa molestias, ipsum eos 
+        necessitatibus dolor voluptates esse minus, sunt numquam nisi autem? Similique possimus sequi qui quas
+         blanditiis deserunt molestiae facilis sunt obcaecati, dicta deleniti mollitia exercitationem! 
+        Libero quae blanditiis nihil repellendus ex laudantium excepturi dolor maiores architecto voluptas?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis eligendi adipisci eos expedita invent
+        officia, ab id vitae blanditiis ipsum nemo perspiciatis dolores dolorem commodi voluptates vero esse, 
+        sed repellat.
+        
+    </p>
+
+    <button id="btn" onclick="togglehide()">
+        Show / Hide Text
+    </button>
+
+    <button id = "btn" onclick="myfunction()"> Click this button to navigae to w3 schools website.</button>
+    
+    <script>
+        
+        let para = document.getElementById("para");
+        para.addEventListener("mouseover", function run()
+        {
+            //alert("Mouse is overing at paragraph.");
+            console.log("Mouse Inside.")
+        })
+
+        para.addEventListener("mouseout", function run()
+        {
+            //alert("Mouse just come out of the paragraph.");
+            console.log("Mouse Outside.")
+
+        })
+        function togglehide()
+        {
+            // let btn = document.getElementById("btn");
+            // let para = document.getElementById("para");
+
+            if(para.style.display!= "none")
+            {
+                para.style.display = "none";
+            }
+            else{
+                para.style.display = "block";
+            }
+
+        }
+        function myfunction()
+        {
+            let buton = document.getElementById("btn");
+            buton.style.fontFamily = "cursive";
+            buton.style.fontSize = "20px";
+            //location.href = "http://www.w3schools.com";
+
+        }
+        
+
+    </script>
+
+
+</body>
+
+</html>

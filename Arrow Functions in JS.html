@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Arrow Function In JS</title>
+</head>
+<body>
+    <script>
+        document.write("Lets create a simple function.");
+        function greet()
+        {
+            console.log("Good Day.");
+        }
+        greet();
+        document.write(" Now create a arrow function of the above greet function.");
+        greet = (a, b) => {console.log(a + b);}
+        greet("Good day", "good night");
+
+        console.log("Anothe Example of arrow function. \n Hello Its me Muhammad Mukarram Asad.")
+
+        let sum = (a,b)=> {return a + b};
+        
+        let sum1 = (a,b) => a+b;
+        
+        let half = a => a/2;
+        
+        let obj = {
+            greetings : "to my dear friend ",
+            // Arrow function ki khasiat ya hai ka ya function sa bahir wali cheezoun ko bhi targt kr skta hai.
+            // Jesa yahn pa wo speak function sa bahir greetings obj ko call kr rha hai function mai.
+            
+            names : ["Ammar","Faez","Owais","Sameer","Mukarram","Shaheer","Razi","Aman"],
+            speak()
+            {
+                this.names.forEach
+                (
+                    (student)=>
+                    {
+                        console.log(" A.Salamualaikum " + this.greetings + student);
+                    }
+                )
+       
+            }
+            
+        }
+        obj.speak();
+
+        setTimeout
+        (
+            arrowfunction =  ()=> 
+        {
+            console.log("This statement comes in console after 3 seconds.");
+        }, 3000);
+        // console.log(setInterval(arrowfunction,5000));
+        for (let index = 0 ; index < obj.names.length ; index++) {
+             console.log(index+1, obj.names[index]);
+            
+        }
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>

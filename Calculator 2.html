@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Scientific Calculator</title>
+
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+
+        .info-container
+        {
+            display: block;
+            margin: 10px 30%;
+            width: 600px;
+            height: 250px;
+            border: 2px solid black;
+        }
+        .info-container:hover
+        {
+            transform: translate(10px, 20px);
+            transition: all ease-in 2s;
+            border-radius: 20px;
+            border-color: grey;
+            cursor: pointer;
+        }
+        .info-container h1{
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: normal;
+            font-weight: bolder;
+        }
+        .info_span_element
+        {
+            color: darkblue;
+            font-style: italic;
+            font-family:'Courier New', Courier, monospace ;
+            text-decoration: dotted;
+        }
+        .info_span_element:hover
+        {
+            color: lightblue;
+            transition: all 3s ease-in;
+            font-weight: 500;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .button-container
+        {
+            width: 350px;
+            height: 350px;
+            display: block;
+            margin: 30px  30%;
+            border: 3px solid brown;
+            border-radius: 30px;
+        }
+        #input_text
+        {
+            width: 250px;
+            height: 30px;
+            margin: 10px 50px;
+        }
+        button{
+            width: 50px;
+            height: 20px;
+            text-align: center;
+            color: red;
+            margin: 8px 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="info-container">
+        <h1> Name : <span class="info_span_element"> Muhammad Mukarram Asad.</span></h1>
+        <h1> Father Name : <span class="info_span_element">Asad Ullah.</span></h1>
+        <h1> Teacher Name : <span class="info_span_element"> Kashif Suleyman .</span></h1>
+        <h1> Title : <span class="info_span_element"> Semi Scientific Calculator.</span></h1>
+        <h1> Qualification : <span class="info_span_element"> Front End Developer.</span></h1>
+    </div>
+
+    <div class="button-container">
+        <input id="input_text" type="text" >
+
+        <p id="error_id" style="color: red ; font-size: 25px;"></p>
+    
+        <button onclick="getValue(1)">1</button>
+        <button onclick="getValue(2)">2</button>
+        <button onclick="getValue(3)">3</button> <br>
+        <button onclick="getValue('4')">4</button>
+        <button onclick="getValue('5')">5</button>
+        <button onclick="getValue('6')">6</button> <br>
+        <button onclick="getValue(7)">7</button>
+        <button onclick="getValue(8)">8</button>
+        <button onclick="getValue(9)">9</button> <br>
+        <button onclick="getValue(0)">0</button>
+        <button onclick="getValue('+')">+</button>
+        <button onclick="getValue('-')">-</button> <br>
+        <button onclick="getValue('*')">*</button>
+        <button onclick="getValue('/')">/</button>
+        <button onclick="calculator()">=</button>  <br>
+        <button onclick="getValue( '(' )">(</button>
+        <button onclick="getValue( ')' )"> )</button>
+        <button onclick="getValue('C')">C</button> <br>
+        <button onclick="getValue('.')">.</button>
+        <button onclick="getValue('%')">%</button>
+        <button onclick="getValue('X')">X</button>
+
+
+
+    </div>
+
+    <script>
+
+        let operands = ['+', '-', '*','/','%']
+        function getValue(val)
+        {
+            console.log(" The value of val is = " + val);
+            let input = document.getElementById('input_text');
+
+            let last_index = input.value.length - 1;
+            console.log(" Last index = " + last_index);
+
+            let last_char = input.value[last_index];
+            console.log("Last character = " + last_char);
+
+            // input.value += val;
+            // console.log(" The input value get by HTML is = " + input);
+
+
+            // let Output = "";
+
+            if( (operands.includes(val)) && (operands.includes(last_char)) )
+            {
+                if(val == last_char)
+                {
+                    var temp = input.value.split('');
+                    temp.splice(last_index, 1, val);
+                    temp.value = temp.join('');
+                }
+            }
+
+            else
+                {
+                    input.value += val;
+                    console.log(" The input value get by HTML is = " + input);
+
+                }
+
+                if(val == 'C')
+                {
+                    input.value = '';
+                }
+
+                if(val == 'X')
+                {
+                    var ans = input.innerHTML%10;
+                    // input.value = input.innerHTML.slice(0,-1);
+                    input.value = ans;
+                }
+
+        }
+
+        function calculator()
+        {
+           let input = document.getElementById('input_text');
+           let last_char = input.value[input.value.length - 1];
+           let error_msg = document.getElementById('error_id');
+
+           if(operands.includes(last_char))
+           {
+              error_msg.innerHTML = " In-valid Expression. Plz be careful."
+           }
+           else
+           {
+              var result = eval(input.value);
+
+              input.value = result;
+              
+              error_msg = '';
+            }
+        }
+    </script>
+    
+</body>
+</html>

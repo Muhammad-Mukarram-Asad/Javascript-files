@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment 11</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        h1 {
+            margin-left: 10px;
+        }
+
+        .listItem {
+            margin-left: 60px;
+            font-size: 25px;
+            color: red;
+        }
+
+        img {
+            margin-left: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        #google_logo {
+            margin: 0;
+            padding: 0;
+        }
+
+        #google_button {
+            width: 100px;
+            height: 30px;
+            color: blue;
+            background-color: white;
+            margin-left: -150px;
+            margin-bottom: 20px;
+        }
+
+        #google_button:hover {
+            color: white;
+            background-color: blue;
+            cursor: pointer;
+        }
+
+        #q4_select {
+            width: 100px;
+            height: 30px;
+            margin-left: 20px;
+        }
+
+        #q4_select option {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #q7_p {
+            font-size: 30px;
+            background-color: green;
+            color: white;
+        }
+
+        #btn_7 {
+            width: 500px;
+            height: 80px;
+            text-indent: 10px;
+            color: blue;
+            background-color: whitesmoke;
+            font-size: 25px;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-left: 30%;
+        }
+        #container
+        {
+            width: 300px;
+            height: 150px;
+            margin-left: 40%;
+            padding: 10px;
+            border: 3px solid green;
+            border-radius: 20px;
+            background-color: white;
+            color: black;
+        }
+        .button_div
+        {
+            margin-left: 42%;
+            width: 220px;
+            height: 30px;
+            border: 2px dotted brown;
+            color: white;
+            background-color: black;
+            margin-top: 20px;
+
+        }
+        .button_keys
+        {
+            width: 50px;
+            height: 25px;
+            color: black;
+            background-color: white;
+            cursor: pointer;
+        }
+        #calculate
+        {
+            width: 100px;
+            height: 30px;
+            color: white;
+            background-color: black;
+            margin-left: 45%;
+            margin-top: 30px;
+        }
+
+        input{
+            width: 200px;
+            height: 30px;
+            border-radius: 20px;
+            border: 3px solid grey;
+            margin-top: 20px;
+            text-indent: 30px;
+        }
+        .q9_container
+        {
+            width: 100%;
+            height: 100px;
+            border: 2px solid black;
+        }
+        #navigation
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        #navigation img{
+            width: 200px;
+            height: 80px;
+        }
+        #navigation nav 
+        {
+            display: flex;
+            margin-right: 30%;
+        }
+        #navigation nav li{
+            list-style: none;
+            margin-right: 30px;
+            margin-top: 35px;
+            font-size: 30px;
+            color: blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Q.1 Code: -->
+    <h2> Question: 01 Code:</h2>
+    <h1> About Me</h1>
+    <ul>
+        <li class="listItem"> Nick_Name: <span id="nickname">A</span></li>
+        <li class="listItem"> Favourites: <span id="favourites">B</span></li>
+        <li class="listItem"> HomeTown: <span id="hometown">C</span></li>
+    </ul>
+
+    <img src="Apni pic.jpg" alt="Handsome Image" width="300px" height="300px">
+
+    <!-- Q.1 Code Finished -->
+    <br> <br>
+
+    <h2> Question: 02 Code: </h2>
+
+    <img id="google_logo" src="https://blog.hubspot.com/hubfs/image8-2.jpg" alt="Google Logo">
+
+    <button id="google_button">Google</button>
+
+    <!-- Q.2 Finished -->
+    <br> <br>
+
+    <h2> Question: 03 Code: </h2>
+    <div class="Q3">
+        <p id="p3" onmouseover="colorChange()"> <b>We</b> have just started <b>this </b> section for the users (<b>
+                beginner to intermediate </b>)
+            who want to <b> work </b> with various <b>Javascript </b> problems and write scripts online to test their
+            <b> skills </b>.
+        </p>
+    </div>
+
+    <!-- Q.3 Finished -->
+    <br> <br>
+
+    <h2> Question: 04 Code: </h2>
+
+    <br>
+    <select name="q4" id="q4_select">
+        <option> Red</option>
+        <option> Blue</option>
+        <option> Green</option>
+        <option> White</option>
+        <option> Black</option>
+    </select>
+
+    <!-- Question:4 Finished -->
+
+    <br> <br>
+
+    <h2> Question: 06 Code: </h2>
+    <br>
+    <p>
+        <a id="myLink" type="text/html" hreflang="en-us" rel="nofollow" target="_self" href="http://www.abc.com/">Visit
+            ABC factory</a>
+    </p>
+    <button onclick="getAttributes()"> Click here to get attributes value</button>
+
+    <!-- Question:6 Finished -->
+    <br> <br>
+
+    <h2> Question : 07 Code</h2>
+    <br>
+    <p id="q7_p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, voluptatem. <br>
+        Reiciendis dolorum fuga id odit doloribus harum ab ipsam molestias!</p>
+
+    <button id="btn_7" onmousemove="changeBackgroundColor()"> Click Here to set the above paragraph background
+        color.</button>
+    
+    <!-- Question:7 Finished -->
+    
+    <br> <br> 
+
+    <h2> Question : 08 code </h2>
+
+    <br>
+
+    <div id="container" class="hey">
+        <!-- onkeyup="convertCurrency()"
+        onkeyup="convertCurrencyPKR()" -->
+        <input id="usd" onkeyup="CurrenyEvent(event)" placeholder="USD Amount" /> USD
+        <br />
+        <input id="pkr" onkeyup="CurrenyEvent(event)" placeholder="PKR Amount" /> PKR
+    </div>
+
+    <!-- Question:8 Finished -->
+
+    <br> <br>
+
+    <!-- Question : 09 Starts -->
+
+    <div class="q9_container">
+        <div id="navigation">
+            <img src="https://cdn.dribbble.com/users/1346218/screenshots/7052546/batman-color-danielbeadle_4x.png" alt="The BATMAN">
+
+            <nav id="navigation_nav">
+                <a href="#" target="_blank" onclick="HomeText()"> <li id="home">Home</li> </a>
+                <a href="#" target="_blank" onclick="ProductText()"> <li id="products">Products</li> </a>
+                <a href="#" target="_blank" onclick="aboutText()">  <li id="about">About Us</li> </a>
+                <a href="#" target="_blank" onclick="contactText()">  <li id="contact"> Contact Us</li> </a>
+            </nav>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        // Question : 01 --> About Me 
+
+        var body = document.getElementsByTagName('body')[0];
+        body.style.fontFamily = "Arial, sans-serif";
+        var spans = document.getElementById('nickname').innerHTML = "Mukii";
+        var favs = document.getElementById('favourites').innerHTML = "Cricket";
+        var home_town = document.getElementById('hometown').innerHTML = "Saadi town";
+
+        // Question: 02 --> LOGO Hijack
+
+        var google_logo = document.getElementById('google_logo');
+        google_logo.width = 200;
+        google_logo.src = "https://1000logos.net/wp-content/uploads/2017/05/Yahoo-logo.png";
+
+        var google_button = document.getElementById('google_button');
+        google_button.innerHTML = " Yahoo!";
+
+        // Question : 03 --> Showing a paragraph text
+
+        function colorChange() {
+            var bold_elements = document.getElementById('p3').style.fontSize = "25px";
+            var target = document.getElementsByTagName('b')[0].style.color = "red";
+            var target = document.getElementsByTagName('b')[1].style.color = "red";
+            var target = document.getElementsByTagName('b')[2].style.color = "red";
+            var target = document.getElementsByTagName('b')[3].style.color = "red";
+            var target = document.getElementsByTagName('b')[4].style.color = "red";
+            var target = document.getElementsByTagName('b')[5].style.color = "red";
+
+            // $("b").attr("style","color:red")
+        }
+
+        /* Q.4 
+        Write a JavaScript program to count and display the items of a dropdown list,
+        in an alert window.
+        */
+        var dropdown = document.getElementById('q4_select');
+        var dropdown_length = dropdown.length;
+        // document.write(dropdown_length);
+        var res = "";
+
+        for (var i = 0; i < dropdown_length; i++) {
+            res = res + " \n " + i + ')' + dropdown[i].innerHTML;
+        }
+
+
+
+        // alert(" The drop down list has " + dropdown_length + " items and they are as follows:\n " 
+        // + res );
+
+
+        /* Question:7 
+        Write a JavaScript program to set the background color of a paragraph.
+        */
+        var p7 = document.getElementById('q7_p');
+
+        function changeBackgroundColor() {
+            if (p7.style.backgroundColor == "green") {
+                p7.style.color = "white";
+                p7.style.backgroundColor = "black";
+
+            }
+
+            else {
+                p7.style.backgroundColor = "green";
+                p7.style.color = "white";
+
+            }
+
+        }
+
+        /*
+        Question : 06
+        Here is a sample html file with a submit button. Write a 
+        JavaScript function to get the value of the href, hreflang, 
+        rel, target, and type attributes of the specified link.
+         */
+
+        function getAttributes() {
+            var u = document.getElementById("myLink").href;
+            alert('The value of the href attribute of the link is : ' + u);
+            var v = document.getElementById("myLink").hreflang;
+            alert('The value of the hreflang attribute of the link is : ' + v);
+            var w = document.getElementById("myLink").rel;
+            alert('The value of the rel attribute of the link is : ' + w);
+            var x = document.getElementById("myLink").target;
+            alert('The value of the taget attribute of the link is : ' + x);
+            var y = document.getElementById("myLink").type;
+            alert('The value of the type attribute of the link is : ' + y);
+        }
+
+        /*
+        Question : 08
+        Assume we have some US dollars. Write a JavaScript 
+        program that converts the total currency to Pakistani 
+        Rupees and vice versa. The conversion should be 
+        performed in real time while user types any number in any 
+        of the fields.
+        (Exchange rates : 1 US Dollar = 105 Pakistani 
+        Rupees)
+        */
+        function CurrenyEvent(e)
+        {
+            var element = e.target;
+            var First = element.value;
+            console.log("The element which is got is = " + element);
+
+             var Second = element.id === 'usd' ? (First * 231.5.toFixed(3)) : (First / 231.5.toFixed(3));
+             var currency2 = document.getElementById(element.id === 'usd' ? 'pkr' : 'usd')
+            currency2.value = Second;
+        }
+
+function convertCurrency() {
+    var currency1Amount = document.getElementById('usd').value;
+    console.log("The value of USD amount entered by the user is = " + currency1Amount);
+
+    var currency2Amount = currency1Amount * 231.65.toFixed(5);
+    console.log(" So the Pakistan Rupees are = "+ currency2Amount);
+    var currency2 = document.getElementById('pkr');
+    currency2.value = currency2Amount
+}
+
+function convertCurrencyPKR() {
+    var pkr = document.getElementById('pkr').value
+    var usdAmount = pkr / 231.65.toFixed(5);
+    var usd = document.getElementById('usd')
+    usd.value = usdAmount.toFixed(5);
+}
+
+/*
+
+Question: 05
+
+Write a JavaScript function that creates a table, accept 
+row, column numbers from the user, and input rows & column number as content (e.g. Row-0 Column-0) of a 
+cell.
+
+*/
+
+// Code: 05
+
+
+/*
+
+Question : 09
+
+Write a program that shows the following web page. If 
+user clicks any of the link in the given navigation bar, the 
+content of area changes according to user’s click.
+
+*/
+
+// Code : 09
+
+var element = document.getElementById('navigation_nav');
+element.style.fontStyle = "italic";
+element.style.color = "black";
+
+function HomeText()
+{
+    document.write(" This is our Home content.")
+}
+function ProductText()
+{
+    document.write(" This is our product content.")
+}function aboutText()
+{
+    document.write(" This is our about content.")
+}function contactText()
+{
+    document.write(" This is our contact content.")
+}
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

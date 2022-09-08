@@ -1,0 +1,158 @@
+<!-- Saylani - Kashif MWF - Batch 8
+E
+JS Class 17
+JS Class 17
+Mohammad Kashif Sulaiman
+•
+Aug 1
+1. document.getElementById()
+    2. document.getElementsByTagName()
+    3. document.getElementsByClassName()
+    4. element.parentElement
+    5. element.children[0]
+
+app.js
+Javascript
+
+index.html
+HTML
+Class comments -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <title>Change Image</title>
+
+    <style>
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+        /* .naya-pakistan {
+            height: 200px;
+            width: 200px;
+            background-color: green;
+            border: 2px solid black;
+            overflow: hidden;
+            padding: 25px
+        }
+
+        .purana-pakistan {
+            height: 200px;
+            width: 150px;
+            background-color: brown;
+            border: 2px solid black;
+            overflow: hidden;
+        } */
+        .old_pic
+        {
+            
+            width: 500px;
+            border: 2px solid orange;
+            overflow: hidden;   
+            padding-left: 0;
+        }
+
+        .new_pic
+        {
+            
+            width: 300px;
+            background-color: grey;
+            border: 2px solid gray;
+            overflow: hidden;
+            
+        }
+        .btn{
+            width: 400px;
+            height: 85px;
+            border: 3px solid black;
+            border-radius: 10px;
+            margin: 10px 10%;
+            font-size: 25px;
+        }
+        .btn:hover
+        {
+            color: white;
+            background-color: black;
+            border-color: white;
+            border-radius: 15px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="purana-pakistan">
+        <img onmouseover="changeImage()"
+            src="https://1.bp.blogspot.com/-aV2CvGgvM7o/YEI_09o2-zI/AAAAAAAADUQ/_kHUBggcfdsOnNKsk1neowa-qbwE3tt2ACPcBGAYYCw/s900/82602990_2459020644359021_5708096360570232265_n.jpg"
+            width="100" />
+
+        <button>Change image</button>
+    </div> -->
+
+    <div class="container-fluid old_pic">
+        <img id="image" class="img-fluid" src="https://cdnuploads.aa.com.tr/uploads/Contents/2020/06/25/thumbs_b_c_0a2ae27bee4bc0a73365df4fbdd9ef7b.jpg?v=234027">
+    </div>
+    <button class="btn btn-primary" onclick="changePic()"> Change your own pic by clicking here.</button>
+
+    <script>
+        function changeImage() {
+    var image = document.getElementsByTagName('img')[0];
+    var parent = image.parentElement
+    debugger
+    var newSrc = "https://i.ytimg.com/vi/ZHDGKqGTY1s/maxresdefault.jpg"
+    var oldSrc = "https://1.bp.blogspot.com/-aV2CvGgvM7o/YEI_09o2-zI/AAAAAAAADUQ/_kHUBggcfdsOnNKsk1neowa-qbwE3tt2ACPcBGAYYCw/s900/82602990_2459020644359021_5708096360570232265_n.jpg"
+    if (image.src === oldSrc) {
+        image.src = newSrc
+        parent.className = 'naya-pakistan'
+    } else {
+        image.src = oldSrc
+        parent.className = 'purana-pakistan'
+    }
+}
+
+function changePic()
+{
+    var image_2 = document.getElementById('image');
+    var parent2 = image_2.parentElement
+    var button = document.getElementsByClassName('btn')[0];
+
+    var old_source = "https://cdnuploads.aa.com.tr/uploads/Contents/2020/06/25/thumbs_b_c_0a2ae27bee4bc0a73365df4fbdd9ef7b.jpg?v=234027";
+    var new_source = "https://w0.peakpx.com/wallpaper/352/495/HD-wallpaper-osman-bey-osman-ghazi-thumbnail.jpg";
+    if (image_2.src === old_source) 
+    {
+        image_2.src = new_source
+        parent2.className = 'new_pic'
+        button.style.marginRight = "200px";
+    }
+    else 
+    {
+            image_2.src = old_source
+            parent2.className = 'old_pic'
+    }
+
+}
+
+
+/*
+    1. document.getElementById()
+    2. document.getElementsByTagName()
+    3. document.getElementsByClassName()
+    4. element.parentElement
+    5. element.children[0]
+*/
+    </script>
+
+</body>
+
+</html>

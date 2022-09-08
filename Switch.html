@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basics</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>This is Switch statement in JavaScript.</h1>
+    </div>
+    <script>
+        let number = 1;
+        switch (number) {
+            case 1:
+                console.log("This number is equal to Monday w.r.t whole week.")
+                break;
+
+            case 2:
+                console.log("This number is equal to Tuesday w.r.t whole week.")
+                break;
+
+            case 3:
+                console.log("This number is equal to Wednesday w.r.t whole week.")
+                break;
+            case 4:
+                console.log("This number is equal to Thursday w.r.t whole week.")
+
+                break;
+            case 5:
+                console.log("This number is equal to Friday w.r.t whole week.")
+
+                break;
+
+            default:
+                console.log("Otherwise the number is should be equal to weekend days.")
+                break;
+        }
+        // Arrays in a JavaScript:
+
+        let employee = {
+            name: "Mukarram",
+            Age: 20,
+            Gender: "Male",
+            Pakistani: true,
+
+        }
+        console.log(employee);
+         //Array Style
+        let info = ["Mukarram", 'Age','A','S','A','D', 20, 'Pakistani', true]
+        console.log(info);
+        let numbers = [20,84,10,200,15,8,60,50];
+        numbers.length;
+        numbers.push("This item comes at the end bcz it is pushed item.")
+        console.log(numbers);
+        numbers.sort();
+        console.log(numbers);
+
+        // Function in a JavaScript:
+        
+        let name = "Mukarram";
+        let name1 = "babar";
+        let name2 = "Hafeez";
+        let name3 = "Kamran";
+
+        function greeting(name)
+        {
+            console.log("A.salamualaikum and very good morning to you Mr. " + name);
+        }
+
+        greeting(name);
+        greeting(name1);
+        greeting(name2);
+        greeting(name3);
+        
+
+    </script>
+
+</body>
+
+</html>

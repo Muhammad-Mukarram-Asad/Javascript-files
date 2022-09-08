@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavsScript Calculator</title>
+
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .container h1{
+            color: white;
+            background-color: black;
+
+        }
+        .container h1:hover{
+            color: brown;
+            background-color: white;
+            cursor: pointer;
+            transform: translateY(20px);
+            transition:  all 3s ease-in;
+
+
+        }
+
+        table {
+            margin: auto;
+        }
+
+        input {
+            font-size: 36px;
+            text-align: center;
+            border: 3px solid darkgrey;
+            box-sizing: border-box;
+            border-radius: 30px;
+        }
+
+
+        button {
+            font-size: 25px;
+            color: black;
+            background-color: white;
+            width: 90px;
+            height: 70px;
+            border: 2px solid black;
+            border-radius: 38px;
+            margin: 6px;
+        }
+
+        .calculator {
+            display: inline-block;
+            padding: 12px;
+            border-radius: 20px;
+            background-color: #746a7a;
+            border: 4px solid black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1> Welcome to HTML, CSS and JAVASCRIPT Calculator</h1>
+        <div class="calculator">
+            <input type="text" placeholder="Output Comes Here" id="screen">
+            <table>
+                <tr>
+                    <td onclick="sound()"><button>(</button></td>
+                    <td onclick="sound()"><button>)</button></td>
+                    <td onclick="sound()"><button>C</button></td>
+                    <td onclick="sound()"><button>%</button></td>
+
+                </tr>
+
+                <tr>
+                    <td onclick="sound()"><button>7</button></td>
+                    <td onclick="sound()"><button>8</button></td>
+                    <td onclick="sound()"><button>9</button></td>
+                    <td onclick="sound()"><button>/</button></td>
+                </tr>
+
+                <tr>
+                    <td onclick="sound()"><button>4</button></td>
+                    <td onclick="sound()"><button>5</button></td>
+                    <td onclick="sound()"><button>6</button></td>
+                    <td onclick="sound()"><button>*</button></td>
+                </tr>
+                <tr>
+                    <td onclick="sound()"><button>1</button></td>
+                    <td onclick="sound()"><button>2</button></td>
+                    <td onclick="sound()"><button>3</button></td>
+                    <td onclick="sound()"><button>-</button></td>
+                </tr>
+                <tr>
+                    <td onclick="sound()"><button>0</button></td>
+                    <td onclick="sound()"><button>.</button></td>
+                    <td onclick="sound()"><button>+</button></td>
+                    <td onclick="sound()"><button>=</button></td>
+                </tr>
+
+                <tr>
+                    <td onclick="sound()"><button> Sin</button></td>
+                    <td onclick="sound()"><button> Cos</button></td>
+                    <td onclick="sound()"><button> Tan</button></td>
+                    <td onclick="sound()"><button> Abs</button></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</body>
+<script>
+
+    function sound() {
+        const audio = new Audio("button click sound.mp3");
+        audio.play();
+    };
+
+    // let buttons = document.querySelectorAll('button');
+
+    //  buttons.forEach(button => { 
+    // (button.addEventListener('click'), () => {audio.play(); });  
+
+
+    let display_screen = document.getElementById('screen');
+
+
+    //  let operators = [...document.querySelectorAll('button')];
+
+    let buttons = document.querySelectorAll('button');
+
+    let Output = "";
+    for (item of buttons) {
+
+        item.addEventListener('click', (f) => {
+            // in order to get the text of the element which is in HTML so we use following syntax in JS:
+
+            buttonText = f.target.innerText;
+
+            console.log("button Text is = ", buttonText);
+
+
+            if (buttonText == '*') {
+                Output += buttonText;
+                display_screen.value = Output;
+            }
+
+
+            else if (buttonText == '+') {
+                if (display_screen.value == '+'  && buttonText == '+') {
+
+                    alert(" Kuch tou Khuda ka khauf kar yr.");
+                    console.log(display_screen.value + " " + buttonText);
+
+                    Output = "";
+                    display_screen.value = Output;
+                }
+                Output += buttonText;
+                display_screen.value = Output;
+                
+                }
+
+
+            else if (buttonText == '-') {
+                Output += buttonText;
+                display_screen.value = Output;
+            }
+
+            else if (buttonText == '/') {
+                Output += buttonText;
+                display_screen.value = Output;
+            }
+
+            else if (buttonText == '%') {
+                Output += buttonText;
+                display_screen.value = Output;
+            }
+
+            else if (buttonText == "C") {
+                Output = "";
+                display_screen.value = Output; // yani khali screen ajai jb hm C press kren.
+            }
+
+            else if (buttonText == '=') {
+                display_screen.value = eval(Output);
+            }
+
+            else if (buttonText == '0') {
+                Output += buttonText;
+                display_screen.value = Output;
+            }
+
+            else if (buttonText == '1') {
+                Output += buttonText;
+                display_screen.value = Output;
+            }
+
+            else if (buttonText == '2') {
+                Output += buttonText;
+                display_screen.value = Output;
+            }
+
+            else if (buttonText == '3') {
+                Output += buttonText;
+                display_screen.value = Output;
+            }
+            else if (buttonText == '4') {
+                Output += buttonText;
+                display_screen.value = Output;
+            }
+
+            else if (buttonText == '5') {
+                Output += buttonText;
+                display_screen.value = Output;
+            }
+            else if (buttonText == '6') {
+                Output += buttonText;
+                display_screen.value = Output;
+            }
+            else if (buttonText == '7') {
+                Output += buttonText;
+                display_screen.value = Output;
+            }
+            else if (buttonText == '8') {
+                Output += buttonText;
+                display_screen.value = Output;
+            }
+            else if (buttonText == '9') {
+                Output += buttonText;
+                display_screen.value = Output;
+            }
+
+            else if (buttonText == 'Sin') {
+                Output += buttonText;
+                let val = prompt("Enter any value to find out its Sine angle: ");
+                display_screen.value = eval(Math.sin(val).toFixed(3));
+            }
+            else if (buttonText == 'Cos') {
+                Output += buttonText;
+                let obj = prompt("Enter any value to find out its Cosine angle: ");
+                display_screen.value = eval(Math.cos(obj).toFixed(3));
+            }
+            else if (buttonText == 'Tan') {
+                Output += buttonText;
+                let obj1 = prompt("Enter any value to find out its tangent angle: ");
+                display_screen.value = eval(Math.tan(obj1).toFixed(3));
+            }
+            else if (buttonText == 'Abs') {
+                let b = prompt("Enter a number in order to make it absolute:");
+                // let c = prompt("After giving number also give next operator:");
+
+                let v = eval(Math.abs(b))
+                Output += v;
+                display_screen.value = Output;
+            }
+            else {
+                // Output += buttonText;
+                // display_screen.value = Output;
+
+
+
+                if (buttonText == '++' || buttonText == '--' || buttonText == '//' || buttonText == '%%') {
+                    alert("You entered the opeartors twice, that's not right. Plz be carefull next time.");
+                }
+
+                //When the input is an operator and the last character of the result is an operator then overwrite it, otherwise append it.
+
+                //     if (operators.includes(buttonText) && operators.includes(button.charAt(buttons.length - 1))) {
+                //     display_screen.value = buttons.substring(0, buttons.length - 1) + val;
+                // }
+                // else {
+                //     display_screen.value += buttonText;
+                // }
+            }
+
+
+        })
+    }
+
+</script>
+
+</html>

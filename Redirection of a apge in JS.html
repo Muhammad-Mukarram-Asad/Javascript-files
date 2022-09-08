@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Re-Direction</title>
+    <style>
+        #btn1{
+            border-radius: 8px;
+            font-size: 20px;
+            /* text-align: center; */
+            width: 20%;
+            margin: auto
+        }
+    </style>
+</head>
+
+<body>
+    <ol type="A">
+        <li>
+            <h4>
+                Welcome all, we will see page redirection in javascript.The window.location object can be used to get
+                the current page address (URL) and to redirect the browser to a new page.The location object contains information about the current URL. The location
+                object is part of the window object and is accessed through the window.location property.
+            </h4>
+        </li>
+        <li>
+            Window Location Href. The window.location.href property returns the URL of the current page.
+            window.location.href;
+        </li>
+        <li>
+            Window Location Hostname
+            The window.location.hostname property returns the name of the internet host (of the current page).
+        </li>
+        <li>
+            The <span style="color: red; text-decoration: underline;"> window.location.pathname </span>
+            The window.location.pathname property returns the pathname of the current page.
+
+
+        </li>
+
+        <li>
+            The <span style="color: red; text-decoration: wavy;"> window.location.protocol </span> property returns the
+            web protocol of the page.
+
+            <span style="text-shadow: 20px;"> Window.Location.Assign </span>
+            <u> The window.location.assign() method loads a new document.</u>
+
+        </li>
+    </ol>
+
+    <button onclick="myfunction()"> Click here for youtube</button>
+    <button onclick="myfunction1()" id="btn1"> Click here for going to Google.com</button>
+
+    <script>
+        function myfunction() {
+            window.location.assign("https://www.youtube.com/");
+        }
+
+        function myfunction1() {
+            window.location.assign("https://www.google.com/");
+        }
+
+
+        // document.write(window.location.href);
+        // document.write(window.location.hostname);
+
+    </script>
+
+</body>
+
+</html>

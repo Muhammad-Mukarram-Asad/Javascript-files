@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: monospace;
+            font-weight: 400;
+        }
+
+        @keyframes animation-1 {
+            0% {
+                color: black;
+                background-color: white;
+            }
+
+            25% {
+                color: white;
+                background-color: black;
+            }
+
+            50% {
+                color: blue;
+                background-color: white;
+            }
+
+            75% {
+
+                color: grey;
+                background-color: rgb(230, 213, 213);
+            }
+
+            100% {
+                content: "Devloped By Mukarram Bhai.";
+                color: white;
+                background-color: black;
+            }
+        }
+
+        .heading2 {
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 500;
+            animation: animation1 10s infinite linear;
+        }
+
+        #text-adder::after {
+            content: "";
+            animation: animation-1 20s infinite linear;
+        }
+        h1{
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            font-weight: bold;
+        }
+        h1:hover
+        {
+            color: blue;
+            background-color: white;
+        }
+        #question
+        {
+            width: 700px;
+            height: 500px;
+            border: 2px solid blue;
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+     </style>   
+</head>
+
+<body>
+    <h1>Welcome to Web Development Quiz</h1>
+    <h2 class="heading2"> This is going to be Marvellous Bro !! <span id="text-adder"></span></h2>
+
+    <!-- <button id="button" onclick="renderQuiz()">Click here</button> -->
+    
+    <div id="question"></div>
+
+    <script src="Saylani Quiz App.js"></script>
+    
+</body>
+</html>

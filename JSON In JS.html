@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JSON Tutorial</title>
+</head>
+
+<body>
+    <h1> The full form of JSON is <br> <span style="color: aqua; font-family: fantasy;"> 
+        JavsScript Object Notation
+        </span></h1>
+
+    <div class="container">
+       <h3> This is my container in the very first division.</h3>
+    </div>
+
+    <script>
+        let j = {
+            "Name": "Mukarram",
+            "Age": 20,
+            "Profession": " Web Developer",
+            "Profession Major": "Mern Stack Developer",
+            "Favourite Dish": "Biryani / Chicken Saalan / Kali masoor ki daal aur chawal"
+        }
+        console.log(j);
+
+        let Myjson= JSON.stringify(j);
+        console.log(Myjson);
+
+        // For replacimg any data in JSON we have to write below command:
+        Myjson = Myjson.replace(20 , 30);  // >>> This is the syntax
+        console.log(Myjson);
+
+       // For parsing you should have to give a valid JSON String.
+
+       obj = JSON.parse(Myjson);
+       // Here JSON is already present in JS and Myjson is a valid JSON String. Otherwise it will give us an error.
+// And one most imp thing of parse method of JSON is that that it will convert a JSON String into an object prototype.
+       console.log(obj);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Dropdown Menus Practice</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+#l1_order_list li
+{
+  color: black;
+  background-color: white;
+  font-size: 25px;
+  list-style-type: lower-roman;
+  margin: 10px;
+}
+
+#l1_order_list li:hover{
+  color: blue;
+  background-color: whitesmoke
+}
+
+#l1_inner_items
+{
+  display: none;
+  margin-left: 6%;
+  width: max-content;
+}
+
+#l1
+{
+  color: brown;
+}
+#l1:hover #l1_inner_items
+{ 
+  display: block;
+  cursor: pointer;
+
+}
+
+</style>
+</head>
+<body>
+
+<h2>Hoverable Dropdown</h2>
+<p>Move the mouse over the button to open the dropdown menu.</p>
+
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a id="l1" href="#">Link 1
+      <div id="l1_inner_items">
+        <ol id="l1_order_list">
+          <li>Faez</li>
+          <li>Owais</li>
+          <li>Sameer</li>
+        </ol>
+      </div>
+    </a>
+
+      
+    <a id="l1" href="#">Link 2
+      <div id="l1_inner_items">
+        <ol id="l1_order_list">
+          <li>Mukarram</li>
+          <li>Shaheer</li>
+          <li>Razi</li>
+        </ol>
+      </div>
+    </a>
+
+    <a id="l1" href="#">Link 3
+      <div id="l1_inner_items">
+        <ol id="l1_order_list">
+          <li>Aman</li>
+          <li> Eshaal</li>
+          <li> Unaisa</li>
+        </ol>
+      </div>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>

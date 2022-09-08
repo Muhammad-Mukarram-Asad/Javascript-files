@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container
+        {
+            width: 250px;
+            height: 150px;
+            margin-left: 40%;
+            padding: 10px;
+            border: 3px solid green;
+            border-radius: 20px;
+            background-color: white;
+            color: black;
+        }
+        .button_div
+        {
+            margin-left: 42%;
+            width: 220px;
+            height: 30px;
+            border: 2px dotted brown;
+            color: white;
+            background-color: black;
+            margin-top: 20px;
+
+        }
+        .button_keys
+        {
+            width: 50px;
+            height: 25px;
+            color: black;
+            background-color: white;
+            cursor: pointer;
+        }
+        #calculate
+        {
+            width: 100px;
+            height: 30px;
+            color: white;
+            background-color: black;
+            margin-left: 45%;
+            margin-top: 30px;
+        }
+        input{
+            width: 200px;
+            height: 30px;
+            border-radius: 20px;
+            border: 3px solid grey;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="container" class="hey">
+        <!-- onkeyup="convertCurrency()"
+        onkeyup="convertCurrencyPKR()" -->
+        <input id="usd" onkeyup="CurrenyEvent(event)" placeholder="USD Amount" /> USD
+        <br />
+        <input id="pkr" onkeyup="CurrenyEvent(event)" placeholder="PKR Amount" /> PKR
+    </div>
+
+    <div class="button_div">
+        <button class="button_keys" onclick="getValue(event)">1</button>
+        <button class="button_keys" onclick="getValue(event)">2</button>
+        <button class="button_keys" onclick="getValue(event)">3</button>
+        <button class="button_keys" onclick="getValue(event)">4</button>
+    </div>
+    <button onclick="clickKer()" id="calculate">Click ker!</button>
+
+
+    <script>
+
+        function CurrenyEvent(e)
+        {
+            var element = e.target;
+            var First = element.value;
+            console.log("The element which is got is = " + element);
+
+             var Second = element.id === 'usd' ? (First * 231.5.toFixed(3)) : (First / 231.5.toFixed(3));
+             var currency2 = document.getElementById(element.id === 'usd' ? 'pkr' : 'usd')
+            currency2.value = Second;
+        }
+
+function convertCurrency() {
+    var currency1Amount = document.getElementById('usd').value;
+    console.log("The value of USD amount entered by the user is = " + currency1Amount);
+
+    var currency2Amount = currency1Amount * 231.65.toFixed(5);
+    console.log(" So the Pakistan Rupees are = "+ currency2Amount);
+    var currency2 = document.getElementById('pkr');
+    currency2.value = currency2Amount
+}
+
+function convertCurrencyPKR() {
+    var pkr = document.getElementById('pkr').value
+    var usdAmount = pkr / 231.65.toFixed(5);
+    var usd = document.getElementById('usd')
+    usd.value = usdAmount.toFixed(5);
+}
+
+function clickKer() {
+    var container = document.getElementById('container')
+    debugger
+    console.log('children -->', container.children)
+    console.log('childNodes -->', container.childNodes)
+}
+
+function getValue(e) {
+    console.log(e.target.innerHTML)
+}
+
+
+
+/*
+    1. document.getElementById()
+    2. document.getElementsByTagName()
+    3. document.getElementsByClassName()
+    4. element.parentElement
+    5. element.children[0] //burger bachay (Tag elements)
+    6. element.childNodes[0] //saray bachay
+    7. element.elementElementChild //element burger bacha
+    8. element.elementChild //element from all children
+    9. element.lastElementChild //last burger bacha
+    10. element.lastChild //last from all children
+*/
+
+/*
+1. event.target //jis element per event call hua, us element ko get karne ka tariqa
+    1.1 event.target.value //for input
+    1.2 event.target.innerHTML //for other tags than input
+2. childNodes vs children 
+3. attributes
+4. inserting/removing elements
+*/
+
+/*
+    1. document.getElementById()
+    2. document.getElementsByTagName()
+    3. document.getElementsByClassName()
+    4. element.parentElement
+    5. element.children[0] //burger bachay (Tag elements)
+    6. element.childNodes[0] //saray bachay
+    7. element.elementElementChild //element burger bacha
+    8. element.elementChild //element from all children
+    9. element.lastElementChild //last burger bacha
+    10. element.lastChild //last from all children
+*/
+
+/*
+1. event.target //jis element per event call hua, us element ko get karne ka tariqa
+    1.1 event.target.value //for input
+    1.2 event.target.innerHTML //for other tags than input
+2. childNodes vs children
+*/
+
+    </script>
+</body>
+
+</html>

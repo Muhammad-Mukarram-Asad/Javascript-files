@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope and Conditionals</title>
+    <style>
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            list-style: none;
+
+        }
+        li{
+            padding: 18px;
+            font-size: 20px;
+        }
+        li:hover{
+            background-color: black;
+            color: white;
+            font-family: cursive;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- div > ul > li {item - $}*7 -->
+    <div>
+        <ul>
+            <li id="l1">item-1</li>
+            <li>item-2</li>
+            <li>item-3</li>
+            <li>item-4</li>
+            <li>item-5</li>
+            <li>item-6</li>
+            <li>item-7</li>
+        </ul>
+    </div>
+    <script>
+    //     var string1 = "This is string number 1.";
+    //     console.log(string1);
+    //     let a = "Mukii";
+    //     {
+    //          let a = "Bhai";
+    //          console.log(a);
+    //     }
+    //     console.log(a);
+    //    const b = "This can't be changed because it is constant.";
+    //    console.log(b);
+    //    b = "I want to change this. Can I?";
+    //    console.log(b);
+
+       // If Else statements in JavaScript:
+       let age = 20;
+       if(age>18)
+       {
+           console.log("You are eligible for driving license.")
+       }
+       else if(age>=18)
+       {
+           console.log("You are eligible for National Identity Card.")
+       }
+       else if(age==10)
+       {
+           console.log("You are so young.")
+       }
+       else{
+           console.log("Beta so ja chl shabash.")
+       }
+
+    </script>
+
+</body>
+</html>

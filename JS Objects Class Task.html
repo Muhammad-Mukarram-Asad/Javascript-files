@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JS Objects</title>
+</head>
+<body>
+    <h1> Saylani Class Task</h1>
+    <h2> Javascript Objects</h2>
+
+    <script>
+        // 1. Copy this array to your code
+var arr = [
+{name: 'Asher', age: 22},
+{name: 'Zubair', age: 20},
+{name: 'Kashif', age: 23},
+{name: 'Wasif', age: 17},
+{name: 'Hanzala', age: 28}
+]
+console.log(arr);
+/*
+i) Replace the 3rd index with {name: 'Siddiq', age: 23}
+
+ii) Push {name: 'Umair', age: '23'} from the end
+
+iii) Remove the first element
+
+iv) Add a field createdAt: new Date() with each through loop.
+*/
+
+// (i) Code:
+
+// var ans = arr.splice(3, 0 ,{name: "Siddiq" , age : 23});
+// console.log(ans);
+
+arr[3] = {name: "Siddiq" , age : 23};
+console.log(arr);
+
+// (ii) Code:
+
+arr.push({name: "Umair", age : 23});
+console.log(arr);
+
+// (iii) Code:
+
+arr.shift();
+console.log(arr);
+
+// (iv)  Code:
+
+var length = arr.length;
+console.log(" The length of the array is = " + length);
+arr.forEach((element) =>
+{
+   element.createdAt = new Date('2022-08-17');
+});
+console.log(arr);
+
+/*
+2. 
+Using above array I want an array consisting only those names whose ages are between
+ 18 to 28 and their names
+ consist of letter 'f'. Then convert the output array to string. For e.g. ['Asher', 'Zubair'] 
+ to 'Asher', 'Zubair'.
+*/
+
+var filter_elements = arr.filter(element => element.age >= 23 && element.age <=28 && element.name.includes('f'));
+console.log(filter_elements);
+console.log(" the string form of the filtered object is = " + JSON.stringify(filter_elements));
+
+
+// 3.These are two arrays
+var students = [
+{
+_id: 'std1',
+name: 'Bill Gates',
+age: 30
+},
+
+{
+_id: 'std2',
+name: 'Steve Jobs',
+age: 30
+},
+
+{
+_id: 'std3',
+name: 'Suzanne Collins',
+age: 30
+}];
+
+
+var courses = [
+{
+name: 'Maths',
+std_id: ['std3', 'std1']
+},
+{
+name: 'Computer Science',
+std_id: ['std3', 'std2']
+},
+{
+name: 'Commerce',
+std_id: ['std1']
+},
+]
+
+// Expected Output Get an array consisting of student name and student Id with courses (array).
+
+const filterByReference = (students, courses) => {
+let res = [];
+res = courses.filter(el => {
+return students.find(element => {
+return element.id === el.id;
+});
+});
+return res;
+}
+console.log(filterByReference(students, courses));
+
+
+
+let combine = Object.assign(students , courses);
+console.log(combine);
+
+let combine2 = {...students , ...courses};
+console.log(combine2);
+
+
+
+
+
+
+
+
+
+
+// Practice Work:
+
+let cars = [
+  {
+    "color": "purple",
+    "type": "minivan",
+    "registration": new Date('2017-01-03'),
+    "capacity": 7
+  },
+  {
+    "color": "red",
+    "type": "station wagon",
+    "registration": new Date('2018-03-03'),
+    "capacity": 5
+  }
+]
+
+console.log(cars);
+
+let car = {
+  "color": "blue",
+  "type": "cabrio",
+  "registration": new Date('2016-05-02'),
+  "capacity": 2
+}
+cars.unshift(car);
+console.log(cars);
+
+let car1 = {
+ "color": "green",
+ "type": "cabrio",
+ "registration": new Date('2016-05-02'),
+ "capacity": 2
+}
+cars.push(car1);
+
+/*
+Array.splice(
+  {index where to start},
+  {how many items to remove},
+  {items to add}
+);
+*/
+
+let car2 = {
+  "color": "white",
+  "type": "cabrio",
+  "registration": new Date('2016-05-02'),
+  "capacity": 2
+}
+cars.splice(2, 0, car2);
+
+
+</script>
+    
+</body>
+</html>

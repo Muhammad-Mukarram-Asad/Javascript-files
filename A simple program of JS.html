@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> A simple program of JavaScript</title>
+    <style>
+        h2{
+            background: linear-gradient( black, blue);
+            color: white;
+            margin: 10px;
+            text-align: center;
+        }
+        p{
+            color: black;
+            font-size: 20px;
+            font-style: italic;
+        }
+        p:hover{
+            color: white;
+            background-color: black;
+            font-size: 25px;
+            text-align: center;
+            transition: ease-in-out;
+            transition-delay: 1s;
+            transition-duration: 5s;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div id="items">
+        <h2> Quality W.r.t Month</h2>
+        <p>In this javascript program, I am doing to tell your quality with respect to your birthday month.</p>
+    </div>
+    <script>
+        alert("All of you get ready now for this fantastic game!!!")
+        let p = prompt("Tell me your birthday month correctly");
+        for (let index = 0; index < 12; index++)
+         {
+            if(p == "January")
+            {
+                let answer = "Your special quality is light and sweet voice.";
+                document.getElementById("items").style.color.fontcolor= "blue";
+                break;
+                
+            }
+           
+            else if(p == "March")
+            {
+                document.write("Your special quality is Intelligence.")
+                break;
+
+            }
+            else if(p == "April")
+            {
+                document.write("Your special quality is choice.")
+                break;
+
+            }
+            else if(p == "May")
+            {
+                document.write("Your special quality is reserve nature.")
+                break;
+
+            }
+            else if(p == "June")
+            {
+                document.write("Your special quality is hot and cold body temperature.")
+                break;
+
+            }
+            else if(p == "July")
+            {
+                document.write("Your special quality is Eyes.")
+                break;
+
+            }
+            else if(p == "August")
+            {
+                document.write("Your special quality is Friendly Nature.")
+                break;
+
+            }
+            else if(p == "September")
+            {
+                document.write("Your special quality is Nose.")
+                break;
+
+            }
+            else if(p == "October")
+            {
+                document.write("Your special quality is Teeth.")
+                break;
+
+            }
+            else if(p == "November")
+            {
+                document.write("Your special quality is Hands.")
+                break;
+
+            }
+            else if(p == "December")
+            {
+                document.write("Your special quality is fair skin color.")
+                break;
+
+            }
+            else{
+                document.write("Kuch nhi, bs sona ja rha hun.")
+                break;
+            }
+            
+                
+        }
+       
+
+    </script>
+    
+</body>
+</html>

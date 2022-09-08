@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <style>
+         *
+        {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        #friendContainer
+        {
+            width: 800px;
+            height: 600px;
+            background-color: white;
+            border: 3px solid black;
+            text-align: center;
+            display: block;
+            margin: 10px auto;
+        }
+        #friend_heading
+        {
+            color: blue;
+            text-decoration: underline;
+            text-align: center;
+        }
+        .rowDiv
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 800px;
+            height: 500px;
+            border: 2px solid blue;
+            margin-top: 5px;
+
+        }
+        .suggestions
+        {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid black;
+            background-color: white;
+            color: green;
+            width: 400px;
+            height: 300px;
+            margin-right: 10px;
+
+        }
+        .suggestion_names
+        {
+            display: flex;
+            flex-direction: column;
+        }
+        .suggestion_inner_part
+        {
+            display: flex;
+            margin: 10px;
+        }
+        .suggestion_inner_part label
+        {
+            font-size: 25px;
+            margin-left: 20px;
+            font-size: 26px;
+            margin-top: 10px;
+
+        }
+        .suggestion_inner_part button
+        {
+            width: 150px;
+            height: 50px;
+            margin-left: 20px;
+        }
+        #ymk
+        {
+            text-align: center;
+            color: black;
+        }
+
+        #friendNames
+        {
+            width: 300px;
+            height: 300px;
+            color: black;
+            font-size: 25px;
+        }
+        #friendNames_text
+        {
+            color: orange;
+            font-size: 25px;
+            display: flex;
+            flex-direction: column;
+        }
+        #friend_buttons button
+        {
+            width: 200px;
+            height: 50px;
+            color: white;
+            background-color: black;
+            border: 3px solid white;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-right: 35px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="friendContainer">
+        <h1 id="friend_heading">Welcome Heading</h1>
+
+        <div class="rowDiv">
+
+            <div id="friendNames">
+                <p id="friendNames_text">hello hy bye shy ty gye</p>
+            </div>
+    
+            <div class="suggestions">
+                <h2 id="ymk"> You May know Them</h2>
+                <div class="suggestion_names">
+                    <div class="suggestion_inner_part">
+                      <label> A: </label> 
+                      <button onclick="addthese(event)">Add Friend</button> 
+                    </div>
+
+                    <div class="suggestion_inner_part">
+                        <label> B: </label> 
+                        <button onclick="addthese(event)">Add Friend</button> 
+                      </div>
+                    
+                      <div class="suggestion_inner_part">
+                        <label> C: </label> 
+                        <button onclick="addthese(event)">Add Friend</button> 
+                      </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    
+        <div id="friend_buttons">
+            <button onclick="addFriend()"> Add Friend</button>
+            <button onclick="removeFriend()"> Remove Friend</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <h1>Login</h1>
+    <div class="signUpContainer">
+        <form>
+            <label for="email_id">Email: </label> 
+            <input type="email" id="email_id" placeholder="Enter your email address"> 
+
+            <label for="password_id">Password: </label> 
+            <input type="password" id="password_id" placeholder="Enter your password">  
+            
+            <button id="button_signUp">Sign In</button>
+
+        </form>
+
+        <div class="endingLine">
+            <p>If you don't have an account, then click on the below signup button</p> 
+            <button><a href="Assignment 15 signUp.html"> SignUp Here </a> </button>
+        </div>
+
+    </div> -->
+
+
+
+    
+</body>
+</html>

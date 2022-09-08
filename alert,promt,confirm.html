@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basics Part 2</title>
+</head>
+
+<body>
+    <h2>Alert() , prompt() and Confirm() methods in JavaScript. </h2>
+    <script>
+        // Alert() MMethod:
+        //This method is just used for giving a message to a user. Just for reading.
+        alert("JavaScript Greetings!. Have a fun guys.")
+
+        // Prompt() Method:
+        // This method is used for giving a message to a user as well as taking actions from the user.
+
+        console.log("Let I made a Game in which it requires user name so before user started to play game he/she must has to give their names or remains guest as default");
+        let name = prompt("What is your name?" , "Guest");
+        console.log(name);
+
+        // Confirm() Method:
+        // This method is used for confirming things before user can take any type of actions.
+
+        let message = confirm("Are you really want to delete this post?");
+        console.log(message);
+
+        // Am Assignment given by Harry Bhai:
+
+        let age = prompt("Enter your age correctly please");
+        console.log(age);
+        if(age<=12)
+        {
+            console.log("Ops you are too short than the required age so we are placing you in our");
+            console.log(" Kid category so you can't be entered in this function.")
+        }
+        else if(age>=13)
+        {
+            console.log(" V.nice you are a teen_ager so we are placing you in our");
+            console.log(" teen_ager category so you are allowed to entered in this function.")
+        }
+        else if(age>=18 && age<=20)
+        {
+            console.log(" Bravo, you are up to mark. Your age is perfectly matched with the" +
+           " required age. So you are welcome in our luxurious show. " );
+        }
+        else{
+            console.log(" We are sorry. We can't give you permission to enter in this powerful show.")
+        }
+
+
+    </script>
+</body>
+
+</html>

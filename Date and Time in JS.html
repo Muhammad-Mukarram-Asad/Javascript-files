@@ -1,0 +1,113 @@
+<!dOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date and Time Turorial</title>
+
+    <style>
+        .container {
+            background-color: black;
+            color: white;
+            border: 3px solid white;
+            margin: auto;
+            text-align: center;
+        }
+        .container p{
+            font-size: 25px;
+            color: blue;
+        }
+
+        #time {
+            font-weight: bold;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <p id="showclock"> Pakistan local Time</p>
+    <button onclick="clearInterval(clock)" ondblclick="clck(clock)"> Click me </button>
+
+    <div class="container">
+       <p> Current time is <span id="time"></span> </p>
+    </div>
+    
+    <script>
+        function clck()
+        {
+            var d = new Date();
+            var e = d.toLocaleTimeString();
+            document.getElementById("time").innerHTML = e;     
+            // var d = new Date();
+            // var e =  d.toLocaleTimeString();
+            // document.write(e);
+        }
+        var clock = setInterval(clck, 1000);
+
+        // function updateTime() 
+        // {
+        //     var a = new Date();
+        //     var b = a.toLocaleTimeString();
+        //     document.getElementById("time").innerHTML = b;
+        //     // document.getElementById("time").innerHTML = Date.toLocaleTimeString;
+        // }
+        // var IntervalVariable = setInterval(updateTime, 1000);
+
+        
+        
+
+        
+        let now = new Date();
+        document.write("The date is = ", now, "<br>");
+
+        let obj = new Date(0);
+        document.write("The date with parameter zero is = ", obj, "<br>");
+
+        let obj1 = new Date(5);
+        document.write("The date with parameter five is = ", obj1, "<br>");
+
+        let obj2 = new Date(10);
+        document.write("The date with parameter ten is = ", obj2, "<br>");
+
+        let obj3 = new Date("2021-11-30");
+        document.write("The date is = ", obj3, "<br>");
+
+        // let newDate = new Date(year, month, date, hours, minutes, seconds, milliseconds);
+        // let newDate = new Date(3020, 4, 6, 9, 3, 2, 34);
+        let newdate = new Date(2022, 7, 15, 5, 10);
+        document.write("The manual input date is =" + newdate + "<br>");
+
+        let Object = new Date();
+        let yr = Object.getFullYear();
+        document.write("The year is ", yr, "<br>");
+
+        let dat = Object.getDate();
+        document.write("The date is ", dat, "<br>");
+
+        let month = Object.getMonth();
+        document.write("The month is ", month, "<br>");
+
+        let hours = Object.getHours();
+        document.write("The hours is ", hours, "<br>");
+
+        Object.setDate(15);
+        Object.setMinutes(16);
+        document.write(Object);
+
+        // newDate.setDate(15);
+        // newDate.setMinutes(57);
+        // console.log(newDate)
+        // setInterval(updateTime, 100);
+
+        
+
+
+    </script>
+
+</body>
+
+</html>

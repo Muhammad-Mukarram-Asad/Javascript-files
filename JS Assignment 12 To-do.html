@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="To_Do.css">
+    <script src="To do.js"></script>
+    <title>To-do App</title>
+</head>
+<body>
+    <h1 class="text-center text-capitalize"> To-do App</h1>
+
+    <div class="container container_1">
+
+        <!-- label for input and below it is the input field. -->
+        <label for="input"> Input: </label>
+        <input type="text" class="input-lg input-sm" placeholder="Items appear here" id="input" /> 
+        
+        <!-- The two buttons (Add-Button & Update-Button) which used in JS. -->
+        <button id="addButton" onclick="addition()">Add Item</button>
+        <button id="updateButton" onclick="updation()" style="display: none;">Update Item</button>
+        
+        <!-- A paragraph for displaying an error msg. -->
+        <p id="msg">You are not allowed to leave input field empty. Plz fill it.</p>
+        
+        <!-- A simply an un-ordered list used for holding values which will be given by JS. -->
+        <ul class="container-fluid" id="list"></ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- How to get data from local storage: 
+If you refresh the page, you'll note that all of your data is gone. In order to solve that 
+issue, we run a IIFE (Immediately invoked function expression) to retrieve the data from 
+local storage. Follow along: 👇 -->
+
+<!-- (() => {
+  data = JSON.parse(localStorage.getItem("data")) || [];
+  console.log(data);
+  createTasks();
+})(); -->
+    
+</body>
+</html>
